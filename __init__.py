@@ -22,7 +22,7 @@ def api_pas(arg):
     new_request = method_dict[request.method]
     header_dict = dict(request.headers)
     header_dict.update({"Accusoft-Secret": "mysecretkey"})
-    r = new_request("http://localhost:3000/"+arg, headers=header_dict, json=request.get_json())
+    r = requests.request(method, "http://localhost:3000/"+arg, headers=header_dict, json=request.get_json())
     return r.text
 
 if __name__ == '__main__':
