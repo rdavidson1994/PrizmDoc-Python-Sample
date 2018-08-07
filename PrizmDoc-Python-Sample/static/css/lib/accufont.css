@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "AccuFont";
+  src: url("https://www.accusoft.com/wp-content/themes/accusoft_tk-1.0/assets/fonts/siteicon.eot");
+  src: url("https://www.accusoft.com/wp-content/themes/accusoft_tk-1.0/assets/fonts/siteicon.eot") format("embedded-opentype"), url("https://www.accusoft.com/wp-content/themes/accusoft_tk-1.0/assets/fonts/siteicon.woff") format("woff"), url("https://www.accusoft.com/wp-content/themes/accusoft_tk-1.0/assets/fonts/siteicon.ttf") format("truetype"), url("https://www.accusoft.com/wp-content/themes/accusoft_tk-1.0/assets/fonts/siteicon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="fa accusoft-"] {
+  display: inline-block;
+  font: normal normal normal 14px/1 AccuFont;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.accusoft-integration:before {
+  content: "\e61a";
+}
+.accusoft-conversion:before {
+  content: "\e61b";
+}
+.accusoft-government:before {
+  content: "\e605";
+}
+.accusoft-financial:before {
+  content: "\e606";
+}
+.accusoft-dicom:before {
+  content: "\e607";
+}
+.accusoft-scannercontrol:before {
+  content: "\e608";
+}
+.accusoft-ocr-icr-micr:before {
+  content: "\e609";
+}
+.accusoft-formsprocessing:before {
+  content: "\e60a";
+}
+.accusoft-cleanupimages:before {
+  content: "\e60b";
+}
+.accusoft-stats:before {
+  content: "\e60c";
+}
+.accusoft-workflow:before {
+  content: "\e60d";
+}
+.accusoft-configurator:before {
+  content: "\e60e";
+}
+.accusoft-ssl:before {
+  content: "\e60f";
+}
+.accusoft-slideshow:before {
+  content: "\e610";
+}
+.accusoft-advancedsearch:before {
+  content: "\e611";
+}
+.accusoft-mobileviewing:before {
+  content: "\e612";
+}
+.accusoft-redactions:before {
+  content: "\e613";
+}
+.accusoft-watermarking:before {
+  content: "\e614";
+}
+.accusoft-esign:before {
+  content: "\e615";
+}
+.accusoft-barcode:before {
+  content: "\e616";
+}
+.accusoft-compression:before {
+  content: "\e617";
+}
+.accusoft-ocr:before {
+  content: "\e618";
+}
+.accusoft-documentviewing:before {
+  content: "\e619";
+}
+.accusoft-server-icon:before {
+  content: "\e602";
+}
+.accusoft-cloud-icon:before {
+  content: "\e603";
+}
+.accusoft-sdk-icon:before {
+  content: "\e604";
+}
+.accusoft-support-icon:before {
+  content: "\e600";
+}
+.accusoft-products-icon:before {
+  content: "\e601";
+}
