@@ -1,0 +1,315 @@
+@import "lib/skel.scss";
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300italic,400,400italic");
+
+/* (c) Brian Jenkins, Kiefer Sivitz | MIT licensed */
+
+// Accusoft
+$accusoft-anakiwa: #80cfff;
+$accusoft-bali-hai: #7da1b2;
+$accusoft-cape-cod: #515554;
+$accusoft-coral: #ff7e4a;
+$accusoft-dove-gray: #5e5e5e;
+$accusoft-gunsmoke: #687270;
+$accusoft-hibiscus: #a9225c;
+$accusoft-mantis: #84bc6f;
+$accusoft-mine-shaft: #353535;
+$accusoft-pickled-bluewood: #1f303d;
+$accusoft-tan-hide: #f89e5c;
+$accusoft-tradewind: #5abaae;
+
+// Header
+$header-accent-color: #5abaae;
+$header-background-color: #1f303d;
+$header-border-color: #dde1eb;
+$header-foreground-color: #ffffff;
+
+// Main
+$main-accent-color: #a9225c;
+$main-background-color: #ffffff;
+$main-border-color: #dde1eb;
+$main-foreground-color: #000000;
+
+// Footer
+$footer-accent-color: #ffffff;
+$footer-background-color: #1f303d;
+$footer-border-color: #dde1eb;
+$footer-foreground-color: #ffffff;
+
+/* Type */
+
+body {
+	background-color: $main-background-color;
+}
+body, input, select, textarea {
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 1.65;
+}
+a {
+	transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	text-decoration: none;
+	border-bottom: dotted 1px;
+}
+a:before, a strong {
+	transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+a:hover {
+	border-bottom-color: transparent;
+}
+a:hover:before, a:hover strong {
+	color: inherit;
+}
+strong, b {
+	font-weight: 600;
+}
+em, i {
+	font-style: italic;
+}
+p {
+	margin: 0 0 2rem 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 900;
+	line-height: 1.5;
+	margin: 0 0 1rem 0;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	text-decoration: none;
+	color: inherit;
+}
+h1 {
+	font-size: 3.25rem;
+	line-height: 1.25;
+	margin: 0 0 2rem 0;
+}
+h2 {
+	font-size: 2.5rem;
+	line-height: 1.35;
+	margin: 0 0 2rem 0;
+}
+h3 {
+	font-size: 1.75rem;
+	margin: 0 0 1.5rem 0;
+}
+h4 {
+	font-size: 1.25rem;
+}
+h5 {
+	font-size: 0.9rem;
+}
+h6 {
+	font-size: 0.7rem;
+}
+@media screen and (max-width: 736px) {
+	h1 {
+		font-size: 2rem;
+		margin: 0 0 1.5rem 0;
+	}
+	h2 {
+		font-size: 1.5rem;
+		margin: 0 0 1rem 0;
+	}
+	h3 {
+		font-size: 1.25rem;
+		margin: 0 0 1rem 0;
+	}
+	h4 {
+		font-size: 1rem;
+	}
+}
+sub {
+	font-size: 0.8rem;
+	position: relative;
+	top: 0.5rem;
+}
+sup {
+	font-size: 0.8rem;
+	position: relative;
+	top: -0.5rem;
+}
+blockquote {
+	font-style: italic;
+	margin: 0 0 2rem 0;
+	padding: 0.5rem 0 0.5rem 2rem;
+	border-left: solid 4px;
+}
+code {
+	font-family: monospace;
+	font-size: 0.9rem;
+	margin: 0 0.25rem;
+	padding: 0.25rem 0.65rem;
+	border: solid 1px;
+	border-radius: 0.325rem;
+}
+pre {
+	font-family: monospace;
+	font-size: 0.9rem;
+	margin: 0 0 2rem 0;
+}
+pre code {
+	line-height: 1.75;
+	display: block;
+	overflow-x: auto;
+	padding: 1rem 1.5rem;
+}
+hr {
+	margin: 3rem 0;
+	border: 0;
+	border-bottom: solid 1px;
+}
+hr.major {
+	margin: 5rem 0;
+}
+@media screen and (max-width: 736px) {
+	hr {
+		margin: 2rem 0;
+	}
+	hr.major {
+		margin: 3rem 0;
+	}
+}
+input, select, textarea {
+	color: $main-foreground-color;
+}
+a {
+	color: $main-foreground-color;
+}
+a:hover {
+	color: $main-accent-color;
+}
+strong, b {
+	color: $main-foreground-color;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: $main-foreground-color;
+}
+blockquote {
+	border-left-color: $main-border-color;
+}
+code {
+	border-color: $main-border-color;
+	background: $main-border-color;
+}
+hr {
+	border-bottom-color: $main-border-color;
+}
+
+/* Box */
+
+.box {
+	margin-bottom: 2rem;
+	padding: 1.5rem;
+	border: solid 1px;
+	border-color: $main-border-color;
+	border-radius: 0.325rem;
+}
+
+/* List */
+
+ol {
+	margin: 0 0 2rem 0;
+	padding-left: 1.25rem;
+	list-style: decimal;
+}
+ol li {
+	padding-left: 0.25rem;
+}
+ul {
+	margin: 0 0 2rem 0;
+	padding-left: 1rem;
+	list-style: disc;
+}
+ul li {
+	padding-left: 0.5rem;
+}
+ul.icons {
+	padding-left: 0;
+	list-style: none;
+	cursor: default;
+}
+ul.icons li {
+	display: inline-block;
+	padding: 0 1rem 0 0;
+}
+ul.icons li:last-child {
+	padding-right: 0;
+}
+@media screen and (max-width: 736px) {
+	ul.icons li {
+		padding: 0 0.75rem 0 0;
+	}
+}
+ul.actions {
+	padding-left: 0;
+	list-style: none;
+	cursor: default;
+}
+ul.actions li {
+	display: inline-block;
+	padding: 0 1rem 0 0;
+	vertical-align: middle;
+}
+ul.actions li:last-child {
+	padding-right: 0;
+}
+ul.actions.vertical li {
+	display: block;
+	padding: 1rem 0 0 0;
+}
+ul.actions.vertical li:first-child {
+	padding-top: 0;
+}
+ul.actions.vertical li > * {
+	margin-bottom: 0;
+}
+
+/* Table */
+
+.table-wrapper {
+	overflow-x: auto;
+}
+table {
+	width: 100%;
+	margin: 0 0 2rem 0;
+}
+table tbody tr {
+	border: solid 1px;
+	border-right: 0;
+	border-left: 0;
+}
+table td {
+	padding: 0.75rem 0.75rem;
+}
+table th {
+	font-size: 0.9rem;
+	font-weight: 600;
+	padding: 0 0.75rem 0.75rem 0.75rem;
+	text-align: left;
+}
+table thead {
+	border-bottom: solid 2px;
+}
+table tfoot {
+	border-top: solid 2px;
+}
+table tbody tr {
+	border-color: $main-border-color;
+}
+table tbody tr:nth-child(2n + 1) {
+	background-color: $main-border-color;
+}
+table th {
+	color: $main-foreground-color;
+}
+table thead {
+	border-bottom-color: $main-border-color;
+}
+table tfoot {
+	border-top-color: $main-border-color;
+}
+
+@import "partials/_structure.scss";
+@import "partials/_button.scss";
+@import "partials/_form.scss";
+@import "partials/_utility.scss";

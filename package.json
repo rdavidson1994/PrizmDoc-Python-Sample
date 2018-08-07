@@ -1,0 +1,36 @@
+{
+  "name": "prizmdoc-python-sample",
+  "version": "1.0.0",
+  "description": "A PrizmDoc Python sample, powered by Flask.",
+  "scripts": {
+    "csscomb": "csscomb --config PrizmDoc-Python-Sample/static/css/.csscomb.json PrizmDoc-Python-Sample/static/css/style.scss PrizmDoc-Python-Sample/static/css/partials/*.scss",
+    "postinstall": "node scripts/postinstall.js",
+    "sassc": "sass --watch PrizmDoc-Python-Sample/static/css/style.scss:PrizmDoc-Python-Sample/static/css/style.min.css --no-cache --sourcemap=none --style=compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdavidson1994/PrizmDoc-Python-Sample.git"
+  },
+  "author": "Robert Davidson",
+  "contributors": [
+    {
+      "name": "Brian Jenkins",
+      "email": "brianjenkins94@gmail.com",
+      "url": "https://github.com/brianjenkins94/"
+    },
+    {
+      "name": "Matt Oldfield",
+      "email": "mattoldfieldweb@gmail.com",
+      "url": "https://github.com/asmattic"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rdavidson1994/PrizmDoc-Python-Sample/issues"
+  },
+  "homepage": "https://github.com/rdavidson1994/PrizmDoc-Python-Sample#readme",
+  "dependencies": {
+    "@prizmdoc/viewer-core": "^1.0.4"
+  }
+}

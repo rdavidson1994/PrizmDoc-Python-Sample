@@ -1,0 +1,22 @@
+/* Button */
+
+input[type="submit"], input[type="reset"], input[type="button"], button, .button {
+	line-height: 3rem;
+	height: 3rem;
+	padding: 0 2rem;
+	cursor: pointer;
+	color: #ffffff;
+	border: none;
+	border-bottom: inset 0.25rem darken($accusoft-tradewind, 10%);
+	border-radius: 0.325rem;
+	background-color: $accusoft-tradewind;
+}
+input[type="file"] ~ label {
+	display: inline;
+	margin-left: 0.5rem;
+	cursor: pointer;
+}
+input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"].disabled, input[type="reset"]:disabled, input[type="button"].disabled, input[type="button"]:disabled, button.disabled, button:disabled, .button.disabled, .button:disabled {
+	pointer-events: none;
+	opacity: 0.5;
+}

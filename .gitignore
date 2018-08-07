@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Dependency directories
+node_modules/
+
+# Accusoft proprietary
+PrizmDoc-Python-Sample/static/css/lib/viewercontrol.css
+PrizmDoc-Python-Sample/static/js/lib/viewercontrol.js

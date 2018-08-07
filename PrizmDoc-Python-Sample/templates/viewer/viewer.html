@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<!-- (c) Brian Jenkins, Kiefer Sivitz | MIT licensed -->
+
+<html lang="en">
+<head>
+	<!-- Metadata -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+
+	<!-- Title -->
+	<title>PrizmDoc Sample</title>
+
+	<!-- Thumbnails -->
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/lib/accufont.css" />
+	<link rel="stylesheet" href="css/style.min.css" />
+
+	<!-- PrizmCSS -->
+	<link rel="stylesheet" href="css/lib/viewercontrol.css" />
+	<link rel="stylesheet" href="css/lib/viewer.css" />
+
+</head>
+<body>
+
+	{% include "../_header.html" %}
+
+	<!-- #main -->
+	<main id="main">
+	</main>
+
+	{% include "../_footer.html" %}
+
+	<!-- Libraries -->
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="js/lib/jquery.hotkeys.js"></script>
+
+	<!-- PrizmJS -->
+	<script src="js/lib/viewercontrol.js"></script>
+	<script src="js/lib/viewer.js"></script>
+	<script src="js/lib/viewerCustomizations.js"></script>
+
+	<!-- Inline Script -->
+	<script>
+		"use strict";
+
+		var queryStringParameters = new URLSearchParams(location.search.substring(1));
+
+		var viewingSessionId = queryStringParameters.get("viewingSessionId");
+
+		var viewerControl;
+
+		$(document).ready(function() {
+
+			viewerControl = $("#main").pccViewer({
+				"documentID": viewingSessionId,
+				"imageHandlerUrl": "/pas",
+				"language": viewerCustomizations.languages["en-US"],
+				"template": viewerCustomizations.template,
+				"icons": viewerCustomizations.icons
+			}).viewerControl;
+
+		});
+	</script>
+
+</body>
+</html>

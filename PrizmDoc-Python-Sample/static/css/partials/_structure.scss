@@ -1,0 +1,90 @@
+/* Header */
+
+#header {
+	line-height: 4rem;
+	width: 100%;
+	height: 4rem;
+	cursor: default;
+	color: $header-foreground-color;
+	background-color: $header-background-color;
+}
+#header a {
+	line-height: inherit;
+	display: block;
+	height: inherit;
+	border-bottom: 0;
+}
+#header a:hover {
+	color: $header-accent-color;
+}
+#header > .logo {
+	position: absolute;
+	top: 0;
+	left: 2rem;
+}
+#header > .logo > a {
+	font-size: 1.25rem;
+	color: inherit;
+}
+#header > .logo > a > img {
+	font-size: 1.5rem;
+	margin-right: 0.5rem;
+	vertical-align: text-bottom;
+}
+#header > nav {
+	position: absolute;
+	top: 0;
+	right: 2rem;
+}
+#header > nav > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#header > nav > ul > li {
+	position: relative;
+	display: inline-block;
+	margin: 0 0.5rem;
+	padding: 0;
+}
+#header > nav > ul > li > a {
+	overflow: hidden;
+	padding: 0 0.5rem;
+	color: inherit;
+}
+#header > nav > ul > li > a > i {
+	font-size: 0.875rem;
+}
+#header > nav > ul > li > ul {
+	display: none;
+}
+#header > nav > ul > li.current > a {
+	color: $header-accent-color;
+}
+#header > nav > ul > li.active > a {
+	color: $header-accent-color;
+}
+
+/* Main */
+
+#main {
+	width: 90%;
+	min-height: calc(100vh - 20rem);
+	margin: 4rem auto;
+}
+@media screen and (max-width: 736px) {
+	#main {
+		width: 80%;
+	}
+}
+
+/* Footer */
+
+#footer {
+	line-height: 8rem;
+	width: 100%;
+	height: 8rem;
+	text-align: center;
+	color: $footer-foreground-color;
+	background-color: $footer-background-color;
+}

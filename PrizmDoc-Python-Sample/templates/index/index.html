@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<!-- (c) Brian Jenkins, Kiefer Sivitz | MIT licensed -->
+
+<html lang="en">
+<head>
+	<!-- Metadata -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+
+	<!-- Title -->
+	<title>PrizmDoc Sample</title>
+
+	<!-- Thumbnails -->
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/lib/accufont.css" />
+	<link rel="stylesheet" href="css/style.min.css" />
+
+</head>
+<body>
+
+	{% include "../_header.html" %}
+
+	<!-- #main -->
+	<main id="main">
+
+		<!-- #viewingSession -->
+		<section id="viewingSession">
+			<div class="row">
+				<div class="12u">
+					<h2 class="align-center">Create a new Viewing Session:</h2>
+				</div>
+			</div>
+
+			{% if apiKey == "" %}
+				{% include "_self-hosted.ejs" %}
+			{% else %}
+				{% include "_cloud-hosted.ejs" %}
+			{% endif %}
+
+		</section>
+
+	</main>
+
+	{% include "../_footer.html" %}
+
+	<!-- Libraries -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Inline Script -->
+	<script>
+		"use strict";
+
+		$(document).ready(function() {
+
+			// Upload EventListener
+			$("#uploadInput").on("change", function(event) {
+				$("#uploadLabel").text($(this).val().substring($(this).val().lastIndexOf("\\") + 1));
+			});
+
+			// Upload Button EventListener
+			$("#uploadButton").on("click", function(event) {
+				$("#uploadInput").click();
+			});
+
+		});
+	</script>
+
+</body>
+</html>

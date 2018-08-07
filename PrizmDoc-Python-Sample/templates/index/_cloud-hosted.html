@@ -1,0 +1,42 @@
+<div class="row">
+    <!-- <div id="document" class="6u expand(narrow)">
+        <h3><i class="fa fa-file-text fa-fw"></i>Local Document</h3>
+        <form action="/viewingSession" method="get">
+            <div class="hidden"><input type="text" name="type" value="document"></div>
+            <div class="field"><input type="text" name="document" placeholder="Filename" required /></div>
+            <p><sub></sub></p>
+            <input type="submit" value="Next" class="float-right" />
+        </form>
+    </div> -->
+    <div id="url" class="6u expand(narrow)">
+        <h3><i class="fa fa-globe fa-fw"></i>File URL</h3>
+        <form action="/viewingSession" method="get">
+            <div class="hidden"><input type="text" name="type" value="url"></div>
+            <div class="field"><input type="text" name="url" placeholder="File URL" required /></div>
+            <p><sub></sub></p>
+            <input type="submit" value="Next" class="float-right" />
+        </form>
+    </div>
+    <div id="upload" class="6u expand(narrow)">
+        <h3><i class="fa fa-upload fa-fw"></i>File Upload</h3>
+        <form action="/viewingSession" method="post" enctype="multipart/form-data">
+            <div class="hidden"><input type="text" name="type" value="upload"></div>
+            <div class="field">
+                <input type="file" name="uploadInput" id="uploadInput" class="hidden" required />
+                <input type="button" id="uploadButton" value="Browse" />
+                <label for="uploadInput" id="uploadLabel">No file selected</label>
+            </div>
+            <p><sub></sub></p>
+            <input type="submit" value="Next" class="float-right" />
+        </form>
+    </div>
+    <div id="viewingPackage" class="6u expand(narrow)">
+        <h3><i class="fa fa-archive fa-fw"></i>Viewing Package</h3>
+        <form action="/viewingSession" method="get">
+            <div class="hidden"><input type="text" name="type" value="viewingPackage" /></div>
+            <div class="field"><input type="text" name="viewingPackage" placeholder="ViewingPackageId" required /></div>
+            <p><sub></sub></p>
+            <input type="submit" value="Next" class="float-right" />
+        </form>
+    </div>
+</div>

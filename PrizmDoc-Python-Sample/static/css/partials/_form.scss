@@ -1,0 +1,33 @@
+/* Form */
+
+label {
+	font-size: 0.9rem;
+	font-weight: 600;
+	display: block;
+	margin: 0 0 1rem 0;
+	color: $accusoft-dove-gray;
+}
+input[type="text"], input[type="password"], input[type="email"], select, textarea {
+	display: block;
+	width: 100%;
+	padding: 0 1rem;
+	text-decoration: none;
+	color: inherit;
+	border: solid 1px;
+	border-color: $main-border-color;
+	border-radius: 0.325rem;
+	outline: 0;
+	background: transparent;
+
+	appearance: none;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+	border-color: $accusoft-tradewind;
+	box-shadow: 0 0 0 1px $accusoft-tradewind;
+}
+input[type="text"]:invalid, input[type="password"]:invalid, input[type="email"]:invalid, select:invalid, textarea:invalid {
+	box-shadow: none;
+}
+input[type="text"], input[type="password"], input[type="email"], select {
+	height: 2.75rem;
+}
