@@ -1,1 +1,1 @@
-# PrizmDocFlaskSample
+# PrizmDoc-Python-Sample
