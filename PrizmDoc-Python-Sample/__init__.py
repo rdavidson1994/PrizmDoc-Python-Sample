@@ -1,29 +1,18 @@
-import os
-import requests
+from flask import Flask, redirect, render_template, request, url_for
 
-from flask import Flask, request, url_for
+app = Flask(__name__, instance_relative_config=True)
 
-method_dict = {'GET':requests.get,
-               'POST':requests.post,
-               'PUT':requests.put,
-               'DELETE':requests.delete,}
+@app.route("/")
+def base_url():
+    return redirect(url_for("index"))
 
-app = Flask(__name__)
-@app.route('/')
-def api_root():
-    return 'Welcome'
+@app.route("/index")
+def index():
+    return render_template("index/index.html", apiKey="")
 
-@app.route('/splash')
-def api_articles():
-    return 'Splash page goes here?'
+@app.route("/viewer")
+def viewer():
+    return render_template("viewer/viewer.html")
 
-@app.route('/pas-service/<arg>', methods=list(method_dict.keys()))
-def api_pas(arg):
-    new_request = method_dict[request.method]
-    header_dict = dict(request.headers)
-    header_dict.update({"Accusoft-Secret": "mysecretkey"})
-    r = requests.request(method, "http://localhost:3000/"+arg, headers=header_dict, json=request.get_json())
-    return r.text
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()
