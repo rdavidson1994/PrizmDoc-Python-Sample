@@ -13,19 +13,19 @@
 	<title>PrizmDoc Sample</title>
 
 	<!-- Thumbnails -->
-	<link rel="shortcut icon" href="images/favicon.ico" />
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	<link rel="shortcut icon" href="{{ url_for("static", filename="images/favicon.ico") }}" />
+	<link rel="apple-touch-icon" href="{{ url_for("static", filename="images/apple-touch-icon.png") }}" />
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="css/lib/accufont.css" />
-	<link rel="stylesheet" href="css/style.min.css" />
+	<link rel="stylesheet" href="{{ url_for("static", filename="css/lib/accufont.css") }}" />
+	<link rel="stylesheet" href="{{ url_for("static", filename="css/style.min.css") }}" />
 
 </head>
 <body>
 
-	{% include "../_header.html" %}
+	{% include "_header.html" %}
 
 	<!-- #main -->
 	<main id="main">
@@ -39,16 +39,16 @@
 			</div>
 
 			{% if apiKey == "" %}
-				{% include "_self-hosted.html" %}
+				{% include "index/_self-hosted.html" %}
 			{% else %}
-				{% include "_cloud-hosted.html" %}
+				{% include "index/_cloud-hosted.html" %}
 			{% endif %}
 
 		</section>
 
 	</main>
 
-	{% include "../_footer.html" %}
+	{% include "_footer.html" %}
 
 	<!-- Libraries -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
