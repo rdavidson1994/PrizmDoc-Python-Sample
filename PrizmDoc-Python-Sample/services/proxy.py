@@ -7,8 +7,6 @@ blueprint = Blueprint("proxy", __name__)
 
 @blueprint.route("/pas/<path:arg>", methods=("GET", "POST", "PUT", "DELETE"))
 def proxy(arg):
-    dir(request)
-
     if config.apiKey == "":
         header_dict = dict(request.headers)
 
