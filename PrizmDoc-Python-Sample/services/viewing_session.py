@@ -9,7 +9,7 @@ blueprint = Blueprint("viewing_session", __name__)
 @blueprint.route("/viewingSession")
 def viewing_session():
     if request.method == "GET":
-        request_type = request.args.get(["type"])
+        request_type = request.args.get("type")
 
         out_json = {"source": {"type": request_type}}
 
@@ -19,10 +19,6 @@ def viewing_session():
             out_json["source"]["url"] = request.args.get("url")
         elif request_type == "viewingPackage":
             out_json["source"]["documentId"] = request.args.get("viewingPackage")
-        elif request_type is None:
-            raise Exception("Missing ?type= parameter")
-        else:
-            raise Exception("Invalid ?type= parameter")
 
         url = f"http://localhost:{config.port}/pas/ViewingSession"
 

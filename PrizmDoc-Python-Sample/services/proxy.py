@@ -5,15 +5,16 @@ from config import args as config
 
 blueprint = Blueprint("proxy", __name__)
 
-@blueprint.route("/pas/<arg>")
+@blueprint.route("/pas/<path:arg>", methods=("GET", "POST", "PUT", "DELETE"))
 def proxy(arg):
-    # Reverse proxy to circumvent CORS.
+    dir(request)
+
     if config.apiKey == "":
         header_dict = dict(request.headers)
 
         header_dict["Accusoft-Secret"] = "mysecretkey"
 
-        url = f"http://localhost:{config.port}/{arg}"
+        url = f"http://{config.pasUrl}:{config.pasPort}/{arg}?{request.query_string.decode('utf-8')}"
 
         out_request = requests.request(method=request.method,
                                        url=url,
@@ -27,7 +28,7 @@ def proxy(arg):
         header_dict["Accusoft-Secret"] = "mysecretkey"
         header_dict["acs-api-key"] = config.apiKey
 
-        url = f"https://api.accusoft.com/PCCIS/V1/{arg}"
+        url = f"https://api.accusoft.com/PCCIS/V1/{arg}?{request.query_string.decode('utf-8')}"
 
         out_request = requests.request(method=request.method,
                                        url=url,
