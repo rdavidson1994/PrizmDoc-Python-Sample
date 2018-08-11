@@ -7,7 +7,7 @@ blueprint = Blueprint("proxy", __name__)
 
 @blueprint.route("/pas/<arg>")
 def proxy(arg):
-    # Reverse proxy to sidestep CORS issues.
+    # Reverse proxy to circumvent CORS.
     header_dict = dict(request.headers)
     header_dict["Accusoft-Secret"] = "mysecretkey"
     url = f"http://localhost:{config.port}/{arg}"
