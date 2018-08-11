@@ -6,7 +6,7 @@ blueprint = Blueprint("index", __name__)
 
 @blueprint.route("/")
 def base_url():
-    return redirect(url_for("index.index"))
+    return redirect(url_for(".index"))
 
 @blueprint.route("/index")
 def index():
