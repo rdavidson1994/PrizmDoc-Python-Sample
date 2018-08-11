@@ -1,10 +1,10 @@
 from flask import Blueprint, request, redirect
-import requests
 import json
+import requests
+
 from config import args as config
 
 blueprint = Blueprint("viewing_session", __name__)
-
 
 @blueprint.route("/viewingSession")
 def viewing_session():

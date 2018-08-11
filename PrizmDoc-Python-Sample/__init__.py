@@ -12,4 +12,4 @@ app.register_blueprint(viewer.blueprint)
 # app.register_blueprint(viewingSession.blueprint)
 
 if __name__ == "__main__":
-    app.run(port=config.port)
+    app.run(port=config.port, debug=True)

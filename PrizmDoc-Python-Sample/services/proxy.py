@@ -1,9 +1,9 @@
-import requests
 from flask import Blueprint, request
+import requests
+
 from config import args as config
 
 blueprint = Blueprint("proxy", __name__)
-
 
 @blueprint.route("/pas/<arg>")
 def proxy(arg):
