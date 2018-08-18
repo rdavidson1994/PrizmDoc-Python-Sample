@@ -17,7 +17,7 @@ def proxy(arg):
         out_request = requests.request(method=request.method,
                                        url=url,
                                        headers=header_dict,
-                                       json=request.get_json())
+                                       data=request.data)
 
         return out_request.text
     else:
@@ -31,6 +31,6 @@ def proxy(arg):
         out_request = requests.request(method=request.method,
                                        url=url,
                                        headers=header_dict,
-                                       json=request.get_json())
+                                       data=request.data)
 
         return out_request.text
