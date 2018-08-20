@@ -35,10 +35,8 @@ def viewing_session():
 
         viewing_session_id = json.loads(post_response.text)["viewingSessionId"]
 
-        put_url = f"http://localhost:{config.port}/pas/ViewingSession/{viewing_session_id}/SourceFile"
+        put_url = f"http://localhost:{config.port}/pas/ViewingSession/u{viewing_session_id}/SourceFile"
 
-        print(request.files.getlist("uploadInput")[0].read())
-
-        requests.put(url=put_url, data={"upload": ("upload", request.files.getlist("uploadInput")[0].read(), "application/octet-stream")})
+        requests.put(url=put_url, data=request.files.getlist("uploadInput")[0].read())
 
         return redirect(f"/viewer?viewingSessionId={viewing_session_id}")
